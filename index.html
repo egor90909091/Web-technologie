@@ -63,7 +63,7 @@
             </div>
         </div>
     </div>
-</header>
+  </header>
     <!-- Topbar End -->
 
 <main>
@@ -85,63 +85,13 @@
                 <a href="about.html" class="nav-item nav-link">О нас</a>
                 <a href="service.html" class="nav-item nav-link">Услуги</a>
                 <a href="contact.html" class="nav-item nav-link">Контакты</a>
-			</div>
-			<button class="btn btn-custom-purple py-4 px-lg-5 d-none d-lg-block" data-toggle="modal" data-target="#myModal">Подобрать авто<i class="fa fa-arrow-right ms-3"></i></button>
-		</div>
+            </div>
+            <button class="btn btn-custom-purple py-4 px-lg-5 d-none d-lg-block">Подобрать авто<i class="fa fa-arrow-right ms-3"></i></button>
+        </div>
     </nav>
     <!-- Navbar End -->
 
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Подтверждение данных</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<form id="carForm">
-						<div class="form-group">
-							<label for="make">Марка:</label>
-							<input type="text" class="form-control" id="make" name="make">
-						</div>
-						<div class="form-group">
-							<label for="model">Модель:</label>
-							<input type="text" class="form-control" id="model" name="model">
-						</div>
-						<div class="form-group">
-							<label for="year">Год выпуска:</label>
-							<input type="number" class="form-control" id="year" name="year">
-						</div>
-						<div class="form-group">
-							<label for="color">Цвет:</label>
-							<input type="text" class="form-control" id="color" name="color">
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
-					<button type="button" class="btn btn-primary" onclick="submitCarForm()">Подтвердить</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<script>
-    function submitCarForm() {
-        const form = document.getElementById('carForm');
-        const formData = new FormData(form);
-        let dataString = '';
-        for (const [key, value] of formData.entries()) {
-            dataString += `${key}: ${value}\n`;
-        }
-        alert(dataString);
-    }
-	</script>
-	
-	
+
     <!-- Carousel Start -->
     <div class="container-fluid p-1 mb-5">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -195,7 +145,6 @@
     </div>
     <!-- Carousel End -->
 
-	
 	<div class="container mt-5">
 		<div class="row">
 			<div class="col">
@@ -250,9 +199,6 @@
 			</div>
 		</div>
 	</div>
-
-	
-	
 </main>
     <footer>
     <!-- Footer Start -->
@@ -318,10 +264,6 @@
     <a href="#" class="btn btn-lg btn-custom-purple btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-	<!-- Bootstrap JS and jQuery -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -337,7 +279,6 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 	<script src="js/table-sort.js"></script>
-
 </body>
 
 </html>
