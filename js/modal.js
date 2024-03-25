@@ -1,15 +1,32 @@
-function submitCarForm() {
-    // Получение данных из формы
-    var make = document.getElementById("make").value;
-    var model = document.getElementById("model").value;
-    var year = document.getElementById("year").value;
-    var color = document.getElementById("color").value;
+$(document).ready(function() {
+    $('#myModal').on('show.bs.modal', function () {
+        $('body').addClass('stop-scrolling');
+        $('.carousel').carousel('pause'); // Останавливаем карусель
+    });
 
-    // Вывод данных в модальном окне
-    var modalContent = "Марка: " + make + "<br>";
-    modalContent += "Модель: " + model + "<br>";
-    modalContent += "Год выпуска: " + year + "<br>";
-    modalContent += "Цвет: " + color + "<br>";
+    $('#myModal').on('hide.bs.modal', function () {
+        $('body').removeClass('stop-scrolling');
+        $('.carousel').carousel('cycle'); // Возобновляем карусель
+    });
 
-    document.getElementById("myModal").getElementsByClassName("modal-body")[0].innerHTML = modalContent;
-}
+    // Открытие модальной формы при нажатии на кнопку "Подобрать авто"
+    $('.btn-custom-purple').click(function(){
+        $('#myModal').modal('show');
+    });
+
+    // Обработчик события нажатия на кнопку "Подтвердить" в первой форме
+    $('#submitBtn').click(function(){
+        console.log("Кнопка 'Подтвердить' была нажата");
+        confirmData(); // Вызываем функцию подтверждения данных
+    });
+
+    // Функция подтверждения данных
+    function confirmData() {
+        var confirmed = window.confirm("Подтвердите действие");
+        if (confirmed) {
+            // Здесь можно добавить действия по подтверждению
+            alert("Введенные данные подтверждены!");
+            $('#myModal').modal('hide'); // Закрываем первую модальную форму
+        }
+    }
+});

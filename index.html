@@ -30,7 +30,12 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+	
+	<!-- Подключение иконок Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	
 </head>
+
 
 
     <!-- Spinner Start -->
@@ -86,7 +91,7 @@
                 <a href="service.html" class="nav-item nav-link">Услуги</a>
                 <a href="contact.html" class="nav-item nav-link">Контакты</a>
             </div>
-            <button class="btn btn-custom-purple py-4 px-lg-5 d-none d-lg-block">Подобрать авто<i class="fa fa-arrow-right ms-3"></i></button>
+				<button id="openModalButton" class="btn btn-custom-purple py-4 px-lg-5 d-none d-lg-block">Подобрать авто<i class="fa fa-arrow-right ms-3"></i></button>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -144,6 +149,65 @@
         </div>
     </div>
     <!-- Carousel End -->
+	
+	<!-- Modal Start -->
+	<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Подбор автомобиля</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="mb-3">
+							<label for="inputName" class="form-label">Имя</label>
+							<input type="text" class="form-control" id="inputName">
+						</div>
+						<div class="mb-3">
+							<label for="inputEmail" class="form-label">Email</label>
+							<input type="email" class="form-control" id="inputEmail">
+						</div>
+						<div class="mb-3">
+							<label for="inputPhone" class="form-label">Номер телефона</label>
+							<input type="tel" class="form-control" id="inputPhone">
+						</div>
+						<!-- Добавьте другие поля здесь по необходимости -->
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+					<button id="submitBtn"  type="button" class="btn btn-primary" onclick="confirmData()">Подтвердить</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal End -->
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="confirmationModalLabel">Подтверждение введенных данных</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body">
+			Вы уверены, что хотите подтвердить введенные данные?
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+			<button id=" confirmBtn" type="button" class="btn btn-primary">Подтвердить</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	
+	
+	
 
 	<div class="container mt-5">
 		<div class="row">
@@ -279,6 +343,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 	<script src="js/table-sort.js"></script>
+	<script src="js/modal.js"></script>
 </body>
 
 </html>
