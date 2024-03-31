@@ -2,6 +2,10 @@ $(document).ready(function() {
     $('#myModal').on('show.bs.modal', function () {
         $('body').addClass('stop-scrolling');
         $('.carousel').carousel('pause'); // Останавливаем карусель
+        // Сбрасываем значения полей ввода
+        $('#inputName').val('');
+        $('#inputEmail').val('');
+        $('#inputPhone').val('');
     });
 
     $('#myModal').on('hide.bs.modal', function () {
