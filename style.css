@@ -7,11 +7,11 @@
 }
 
 .text-custom-purple {
-    color: #800080; /* ”иолетовый цвет */
+    color: #800080; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
 }
 
 .text-custom-gold{
-    color:#FFD700; /* золотой цвет */
+    color:#FFD700; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
 }
 
 .fw-medium {
@@ -26,37 +26,37 @@
     z-index: 99;
 }
 
-/* цвет текста в заголовках таблицы и ячейках */
+/* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .table thead th,
 .table tbody td {
 
-    color: #FFD700; /* –вет текста */
-    font-family: Montserrat Bold 700; /* рифт */
-    font-size: 16px; /* ђазмер шрифта */
+    color: #FFD700; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
+    font-family: Montserrat Bold 700; /* пїЅпїЅпїЅпїЅпїЅ */
+    font-size: 16px; /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
 	 text-stroke: 1px black;
 }
 .table tbody td:nth-child(1) {
-    text-align: left; /* ‚ыравнивание по правому краю */
+    text-align: left; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
 }
 
-/* ‚ыравнивание текста в правой колонке по центру */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
 .table tbody td:nth-child(2) {
-    text-align: center; /* ‚ыравнивание по центру */
+    text-align: center; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
 }
 
-/* цвет фона заголовков таблицы */
+/* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .table thead th {
-    background-color: #6A5ACD; /* цвет фона */
+    background-color: #6A5ACD; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
 }
 
-/* Цвет фона четных строк таблицы */
+/* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .table tbody tr:nth-child(even) {
-    background-color: #BA55D3; /* цвет фона */
+    background-color: #BA55D3; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
 }
 
-/* Цвет фона нечетных строк таблицы */
+/* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .table tbody tr:nth-child(odd) {
-    background-color: #9370DB; /* цвет фона */
+    background-color: #9370DB; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
 }
 
 /*** Spinner ***/
@@ -82,8 +82,8 @@
 }
 
 .btn-custom-purple {
-    background-color: #800080; /* ”иолетовый цвет */
-    color: #FFD700; /* золотой текст */
+    background-color: #800080; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
+    color: #FFD700; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
 }
 
 .btn.btn-primary,
@@ -218,7 +218,7 @@
         position: relative;
         min-height: 450px;
     }
-    
+
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;
@@ -429,4 +429,41 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+/* РЎС‚РёР»Рё РґР»СЏ Р°РЅРёРјР°С†РёРё */
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.content1 {
+
+  display: none;
+  padding: 10px;
+  background-color: #FFFFFF;
+  margin-top: 5px;
+  text-align: center;
+  color: #FFFFFF;
+}
+h3 {
+  cursor: pointer;
+  padding: 5px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  position: relative; /* Р”РѕР±Р°РІР»СЏРµРј РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ */
+}
+h3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px; /* Р Р°СЃРїРѕР»Р°РіР°РµРј РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє СЃР»РµРІР° РѕС‚ Р·Р°РіРѕР»РѕРІРєР° */
+  width: 5px;
+  height: 100%;
+  background-color: black; /* Р§РµСЂРЅС‹Р№ С†РІРµС‚ */
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }

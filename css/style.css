@@ -9,7 +9,10 @@
 .text-custom-purple {
     color: #800080; /* ���������� ���� */
 }
+.text-custom-black{
+  color:black
 
+}
 .text-custom-gold{
     color:#FFD700; /* ������� ���� */
 }
@@ -31,7 +34,7 @@
     border-radius: 15px; /* скругляем углы */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* добавляем тень */
 	}
-	
+
 .navbar-nav .active {
     color: red; /* Цвет подсветки */
     font-weight: bold; /* Жирный текст */
@@ -86,15 +89,15 @@
 /* modal */
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.5); 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
 }
 
 .modal-content {
@@ -353,4 +356,30 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.content {
+  display: none;
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin-top: 5px;
+  text-align: center;
+}
+
+h3 {
+  cursor: pointer;
+  padding: 12px;
+  margin: 0;
+  border: 3px solid #ffffff;
+  border-radius: 3px;
+  position: relative;
+  background-color: #E6E6FA;
+  border-radius: 15px
 }
