@@ -7,6 +7,7 @@ $(document).ready(function() {
         $('#inputEmail').val('');
         $('#inputPhone').val('');
     });
+	
 
     $('#myModal').on('hide.bs.modal', function () {
         $('body').removeClass('stop-scrolling');
@@ -34,3 +35,5 @@ $(document).ready(function() {
         }
     }
 });
+
+

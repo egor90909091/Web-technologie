@@ -1,3 +1,4 @@
+
 function toggleContent(element) {
   var content = element.nextElementSibling.querySelector('p');
   if (content.style.display === "block") {

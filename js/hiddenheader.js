@@ -1,18 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const headers = document.querySelectorAll('.accordion-header');
+$(document).ready(function() {
+    // Загрузка содержимого страницы при загрузке документа
+    $('#content').load('about.html');
 
-    headers.forEach(header => {
-        header.addEventListener('click', function() {
-            const content = this.nextElementSibling;
-            content.classList.toggle('accordion-content-active');
+    // Обработчик клика на элементы навигации
+    $('nav a').click(function(e) {
+        e.preventDefault(); // Предотвращаем переход по ссылке
 
-            if (content.classList.contains('accordion-content-active')) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-                this.style.background = '#dc3545'; // изменение фона заголовка при раскрытии
-            } else {
-                content.style.maxHeight = 0;
-                this.style.background = ''; // сброс фона заголовка при сворачивании
-            }
-        });
+        var pageUrl = $(this).attr('href'); // Получаем URL страницы
+
+        // Загружаем содержимое страницы в блок #content
+        $('#content').load(pageUrl);
     });
 });
