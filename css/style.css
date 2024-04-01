@@ -10,6 +10,13 @@
     color: #800080; /* ���������� ���� */
 }
 
+.text-black{
+    color: #000000; /* ���� ������ */
+    font-family: Montserrat ExtraBold 700; /* ����� */
+    font-size: 15px; /* ������ ������ */
+
+}
+
 
 
 .text-custom-gold{
