@@ -10,9 +10,87 @@
     color: #800080; /* ���������� ���� */
 }
 
+.text-black{
+    color: #000000; /* ���� ������ */
+    font-family: Montserrat ExtraBold 700; /* ����� */
+    font-size: 15px; /* ������ ������ */
+
+}
+
+
+
 .text-custom-gold{
     color:#FFD700; /* ������� ���� */
 }
+
+
+.enlarge-on-hover {
+    transition: transform 0.3s ease; /* добавляем плавный переход */
+}
+.enlarge-on-hover:hover {
+    transform: scale(1.1); /* увеличиваем масштаб при наведении */
+}
+
+.enlarge-and-round img {
+    transition: transform 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease; /* добавляем плавный переход */
+}
+
+.enlarge-and-round:hover img {
+    transform: scale(1.1); /* увеличиваем масштаб при наведении */
+    border-radius: 15px; /* скругляем углы */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* добавляем тень */
+	}
+	
+.navbar-nav .active {
+    color: red; /* Цвет подсветки */
+    font-weight: bold; /* Жирный текст */
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Значение z-index устанавливается выше других элементов */
+}
+
+
+.stop-scrolling {
+    overflow: hidden;
+}
+ .carousel-inner {
+    animation-play-state: paused !important;
+}
+
+.modal-backdrop.show {
+    display: none !important;
+}
+
+
+.btn:hover,
+.btn-custom-purple:hover {
+    color: #fff; /* Белый цвет текста */
+}
+
+
+.btn-custom-purple2 {
+    background-color: #800080; /* ���������� ���� */
+    color: #FFD700; /* ������� ����� */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
 
 .fw-medium {
     font-weight: 600 !important;
@@ -33,7 +111,7 @@
     color: #000000; /* ���� ������ */
     font-family: Montserrat Bold 700; /* ����� */
     font-size: 16px; /* ������ ������ */
-	 text-stroke: 1px black;
+	text-stroke: 1px black;
 }
 .table tbody td:nth-child(1) {
     text-align: left; /* ������������ �� ������� ���� */
@@ -60,7 +138,53 @@
     background-color: #DDA0DD; /* ���� ���� */
 }
 
-/*** Spinner ***/
+/* modal */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+
+}
+.modal-dialog-centered {
+    display: flex;
+	align-items: center;
+    justify-content: center;
+	min-height: calc(100% - 3.5rem);
+    margin: 0;
+}
+
+
+.modal-dialog {
+    display: flex;
+	align-items: center;
+    justify-content: center;
+	min-height: calc(100% - 3.5rem);
+    margin: top left;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 
@@ -295,4 +419,71 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Здесь можно настроить уровень прозрачности затемнения */
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: none;
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-top: 5px;
+    text-align: center;
+}
+/* Стили для анимации */
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.content1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Добавляем отступ между блоками */
+    font-family: Montserrat Bold 700; /* ����� */
+    font-size: 30px; /* ������ ������ */
+
+}
+
+.content1 img {
+    width: 450px; /* Установите размер изображения по вашему усмотрению */
+    height: auto;
+	border-radius: 20px;
+    margin-right: 20px; /* Добавляем отступ между изображением и текстом */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+
+.hidden {
+    display: none;
+	color: #000000; /* ���� ������ */
+    font-family: Montserrat Bold 700; /* ����� */
+    font-size: 16px; /* ������ ������ */
+}
+
+h3 {
+  cursor: pointer;
+  padding: 12px;
+  margin: 0;
+
+
+  position: relative;
+  background-color: #E6E6FA;
+  border-radius: 15px
 }

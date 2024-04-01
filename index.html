@@ -30,11 +30,17 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+	
+	<!-- Подключение иконок Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	
 </head>
+
 
 
     <!-- Spinner Start -->
 <body>
+
 <header>
     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0">
@@ -86,10 +92,11 @@
                 <a href="service.html" class="nav-item nav-link">Услуги</a>
                 <a href="contact.html" class="nav-item nav-link">Контакты</a>
             </div>
-            <button class="btn btn-custom-purple py-4 px-lg-5 d-none d-lg-block">Подобрать авто<i class="fa fa-arrow-right ms-3"></i></button>
+				<button id="openModalButton" class="btn btn-custom-purple py-4 px-lg-5 d-none d-lg-block">Подобрать авто<i class="fa fa-arrow-right ms-3"></i></button>
         </div>
     </nav>
     <!-- Navbar End -->
+
 
 
     <!-- Carousel Start -->
@@ -144,58 +151,147 @@
         </div>
     </div>
     <!-- Carousel End -->
+	
+		<!-- Modal Start -->
+	<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Подбор автомобиля</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="mb-3">
+							<label for="inputName" class="text-black">Имя</label>
+							<input type="text" class="form-control" id="inputName" placeholder="Ivanov Ivan">
+						</div>
+						<div class="mb-3">
+							<label for="inputEmail" class="text-black">Email</label>
+							<input type="email" class="form-control" id="inputEmail" placeholder="example@mail.ru">
+						</div>
+						<div class="mb-3">
+							<label for="inputPhone" class="text-black">Номер телефона</label>
+							<input type="tel" class="form-control" id="inputPhone" placeholder="X(XXX) XXX-XXXX">								
+						</div>
+						<!-- Добавьте другие поля здесь по необходимости -->
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary " style="text-align: left;" data-bs-dismiss="modal">Закрыть</button>
+					<button id="submitBtn"  type="button" class="btn btn-primary" onclick="confirmData()">Подтвердить</button>
 
-	<div class="container mt-5">
-			<div class="row">
-				<div class="col">
-					<h2 class="text-center text-custom-purple mb-5" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);">Прайс-лист автомобилей на заказ</h2>
-					<div class="table-responsive">
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th scope="col">Марка</th>
-									<th scope="col">Цена (в рублях)</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Персональный подбор автомобиля</td>
-									<td>10,000</td>
-								</tr>
-								<tr>
-									<td>Подбор автомобиля с учетом предпочтений клиента(марка, модель, год выпуска, комплектация и т.д.</td>
-									<td>25,000</td>
-								</tr>
-								<tr>
-									<td>Проверка технического состояния выбранного автомобиля</td>
-									<td>5,000</td>
-								</tr>
-								<tr>
-									<td>Юридическая проверка выбранного автомобиля</td>
-									<td>8,000</td>
-								</tr>
-								<tr>
-									<td>Тест-драйв выбранного автомобиля</td>
-									<td>2,500</td>
-								</tr>
-								<tr>
-									<td>Сопровождение на акционе(в случае покупки автомобиля на аукционе)</td>
-									<td>10,000</td>
-								</tr>
-								<tr>
-									<td>Доставка автомобиля к месту назначения</td>
-									<td>По запросу</td>
-								</tr>
-								<tr>
-									<td>Консультация по выбору автомобиля и вопросам авторынка</td>
-									<td>2,000/час</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<!-- Modal End -->
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="confirmationModalLabel">Подтверждение введенных данных</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body">
+			Вы уверены, что хотите подтвердить введенные данные?
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+			<button id=" confirmBtn" type="button" class="btn btn-primary">Подтвердить</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+
+	
+	
+	
+
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col">
+				<h2 class="text-center text-custom-purple mb-5" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);">Price List</h2>
+				<div class="table-responsive">
+					<table class="table table-striped" id="priceTable">
+						<thead>
+							<tr>
+								<th scope="col">Марка</th>
+								<th scope="col">
+									Цена (в рублях)
+									<button class="btn btn-link btn-sm" onclick="sortTable()">↑↓</button>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Персональный подбор автомобиля</td>
+								<td>10,000</td>
+							</tr>
+							<tr>
+								<td>Подбор автомобиля с учетом предпочтений клиента(марка, модель, год выпуска, комплектация и т.д.</td>
+								<td>25,000</td>
+							</tr>
+							<tr>
+								<td>Проверка технического состояния выбранного автомобиля</td>
+								<td>5,000</td>
+							</tr>
+							<tr>
+								<td>Юридическая проверка выбранного автомобиля</td>
+								<td>8,000</td>
+							</tr>
+							<tr>
+								<td>Тест-драйв выбранного автомобиля</td>
+								<td>2,500</td>
+							</tr>
+							<tr>
+								<td>Сопровождение на акционе(в случае покупки автомобиля на аукционе)</td>
+								<td>10,000</td>
+							</tr>
+							<tr>
+								<td>Доставка автомобиля к месту назначения</td>
+								<td>По запросу</td>
+							</tr>
+							<tr>
+								<td>Консультация по выбору автомобиля и вопросам авторынка</td>
+								<td>2,000/час</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<div class="container1 text-center text-custom-purple mb-5 p-5">
+		<h3 onclick="toggleContent(this)">Электромобили</h3>
+		<div class="content1">
+			<img src="img/electroauto.jpg" alt="Electric Car Image" class="hidden">
+			<p class="hidden">Электромобиль - это автомобиль, который использует электрический двигатель для движения. Они экологически чисты и обычно требуют меньше обслуживания, чем автомобили с двигателями внутреннего сгорания.</p>
+		</div>
+
+		<h3 onclick="toggleContent(this)">Бензиновые автомобили</h3>
+		<div class="content1">
+			<img src="img/benzauto.jpg" alt="Gasoline Car Image" class="hidden">
+			<p class="hidden">Бензиновый автомобиль - это транспортное средство, которое работает на бензине или другом виде жидкого топлива. Они широко распространены и обладают высокой производительностью.</p>
+		</div>
+
+		<h3 onclick="toggleContent(this)">Гибридные автомобили</h3>
+		<div class="content1">
+			<img src="img/hybridauto.jpg" alt="Hybrid Car Image" class="hidden">
+			<p class="hidden">Гибридный автомобиль сочетает в себе два или более различных источника энергии, обычно бензиновый двигатель и электрический двигатель. Они обычно более экономичны, чем традиционные бензиновые автомобили.</p>
+		</div>
+	</div>
+
+
+
+	
 </main>
     <footer>
     <!-- Footer Start -->
@@ -231,9 +327,9 @@
                     <h4 class="text-light mb-4">Рассылка</h4>
                     <p>Оставьте свои данные, с вами свяжется наш специалист</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Ваша почта">
-                        <button type="button" class="btn btn-custom-purple py-2 position-absolute top-0 end-0 mt-2 me-2">Отправить</button>
-                    </div>
+						<input id="emailInput" class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Ваша почта">
+						<button id="clearButton" type="button" class="btn btn-custom-purple2 py-2 position-absolute top-0 end-0 mt-2 me-2">Отправить</button>
+					</div>
                 </div>
             </div>
         </div>
@@ -258,7 +354,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-custom-purple btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="" class="btn btn-lg btn-custom-purple2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -275,6 +371,11 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+	<script src="js/table-sort.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/nav.js"></script>
+	<script src="js/script.js"></script>
+	
 </body>
 
 </html>

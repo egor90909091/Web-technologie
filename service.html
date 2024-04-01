@@ -93,7 +93,7 @@
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-bg-2.jpg);">
+    <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-bg-3.jpg);">
         <div class="container-fluid page-header-inner py-5">
             <div class="container text-center">
                 <h1 class="display-3 text-white mb-3 animated slideInDown">Услуги</h1>
@@ -104,7 +104,7 @@
     <!-- Page Header End -->
 
 
-    <!-- Service Start -->
+     <!-- Service Start -->
     <div class="container-xxl service py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -119,12 +119,12 @@
                     <div class="tab-content w-100">
                         <div class="tab-pane fade show active" id="tab-pane-1">
                             <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-200 h-100" src="img/service.jpeg"
-                                            style="object-fit: cover;" alt="">
-                                    </div>
-                                </div>
+                                <div class="col-md-6 enlarge-and-round" style="min-height: 350px;">
+									<div class="position-relative h-100">
+										<img class="position-absolute img-fluid w-200 h-100" src="img/service.jpeg"
+											style="object-fit: cover;" alt="">
+								    </div>
+							    </div>
                                 <div class="col-md-6">
                                     <h3 class="mb-3">Более 21 года в индустрии подбора автомобилей</h3>
                                     <p class="mb-4">В поисках идеального авто? Представьте, если бы вы могли доверить этот процесс профессионалу. Я помогу вам найти, проверить и купить машину вашей мечты в любом уголке нашей страны!</p>
@@ -152,12 +152,12 @@
             </div>
         </div>
     </div>
-  </main>
+</main>
     <!-- Service End -->
 
 
     <!-- Booking Start -->
-    <div class="container-fluid bg-secondary booking my-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid  booking my-5 wow fadeInUp" data-wow-delay="0.1s" style="background-image:url(img/carousel-bg-3-dark.jpg);">
         <div class="container">
             <div class="row gx-5">
                 <div class="col-lg-6 py-5">
@@ -277,9 +277,13 @@
                     <h4 class="text-custom-gold mb-4">Рассылка</h4>
                     <p>Оставьте свои данные, с вами свяжется наш специалист</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Ваша почта">
-                        <button type="button" class="btn btn-custom-purple py-2 position-absolute top-0 end-0 mt-2 me-2">Отправить</button>
-                    </div>
+						<input id="emailInput" class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Ваша почта">
+						<button id="clearButton" type="button" class="btn btn-custom-purple2 py-2 position-absolute top-0 end-0 mt-2 me-2">Отправить</button>
+					</div>
+
+
+
+
                 </div>
             </div>
         </div>
@@ -304,7 +308,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-custom-purple btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-custom-purple2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -321,6 +325,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+	<script src="js/nav.js"></script>
 </body>
 
 </html>
