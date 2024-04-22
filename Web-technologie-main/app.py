@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -28,6 +28,25 @@ def service():
 def contact():
     # Загрузка и отображение страницы "Контакты" (contact page)
     return render_template("contact.html")
+
+
+@app.route("/submit_form", methods=["POST"])
+def submit_form():
+    # Получение данных из формы
+    name = request.form["name"]
+    email = request.form["email"]
+    phone = request.form["phone"]
+
+    # Пример обработки данных: выводим их в консоль сервера
+    print("Полученные данные:")
+    print("Имя:", name)
+    print("Email:", email)
+    print("Телефон:", phone)
+
+    # Здесь вы можете выполнить какие-то действия с полученными данными, например, сохранить их в базе данных
+
+    # Возвращаем сообщение об успешной обработке данных
+    return "Данные успешно получены и обработаны!"
 
 
 if __name__ == "__main__":

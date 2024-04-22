@@ -34,61 +34,15 @@
 
 
 <body>
-<header>
+
+
     <!-- Topbar Start -->
-    <div class="container-fluid bg-light p-0">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-custom-purple me-2"></small>
-                    <small>Уфа, Карла Маркса 12</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-custom-purple me-2"></small>
-                    <small>Ежедневное с 8:00-19:00 </small>
-                </div>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-custom-purple me-2"></small>
-                    <small>8 (962) 999 99 99</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-custom-purple me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-custom-purple me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-custom-purple me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-custom-purple me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+{% include 'topbar.html' %}
     <!-- Topbar End -->
+
 <main>
-
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-          <h2 class="m-0 text-custom-purple">
-
-                               <img src="../static/img/logo.png" height="60">
-
-                LuxeLane</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Главная</a>
-                <a href="about.html" class="nav-item nav-link">О нас</a>
-                <a href="service.html" class="nav-item nav-link active">Услуги</a>
-
-                <a href="contact.html" class="nav-item nav-link">Контакты</a>
-            </div>
-            <a href="" class="btn btn-custom-purple py-4 px-lg-5 d-none d-lg-block">Подобрать авто<i class="fa fa-arrow-right ms-3"></i></a>
-        </div>
-    </nav>
+{% include 'navbar.html' %}
     <!-- Navbar End -->
 
 
@@ -181,7 +135,7 @@
                                     <select class="form-select border-0" style="height: 55px;">
                                         <option selected>Тип автомобилей</option>
                                         <option value="1">Бюджетный авто</option>
-                                        <option value="2">Экслюзиваынй авто</option>
+                                        <option value="2">Экслюзиваный авто</option>
 
                                     </select>
                                 </div>
@@ -241,70 +195,12 @@
         </div>
     </div>
     <!-- Testimonial End -->
+{% include 'modals.html' %}
 
 
-    <!-- Footer Start -->
-    <footer>
-  <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-custom-gold mb-4">Адрес</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Карла Маркса 12, Уфа, Россия</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>8(962) 999 99 99</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>MarselineTWD@lshabrin.ru</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-custom-gold mb-4">Время Работы</h4>
-                    <h6 class="text-light">Понедельник - Пятница:</h6>
-                    <p class="mb-4">00:00  - 19:00</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-custom-gold mb-4">Услуги</h4>
-                    <a class="btn btn-link" href="">Персональный подбор автомобиля</a>
-                    <a class="btn btn-link" href="">Сервисная проверка</a>
-                    <a class="btn btn-link" href="">Сервисное обслуживание</a>
-                    <a class="btn btn-link" href="">Клининг автомобиля</a>
-                    <a class="btn btn-link" href="">Доставка автомобиля</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-custom-gold mb-4">Рассылка</h4>
-                    <p>Оставьте свои данные, с вами свяжется наш специалист</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-						<input id="emailInput" class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Ваша почта">
-						<button id="clearButton" type="button" class="btn btn-custom-purple2 py-2 position-absolute top-0 end-0 mt-2 me-2">Отправить</button>
-					</div>
-
-
-
-
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-custom-gold text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">LuxeLane</a>.Все права защищены.</a>
-                    </div>
-                    <div class="col-md-6  text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="index.html">Главная</a>
-                            <a href="service.html">Помощь</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  </footer>
     <!-- Footer End -->
+{% include 'footer.html' %}
+
 
 
     <!-- Back to Top -->
@@ -314,18 +210,21 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="..lib/wow/wow.min.js"></script>
+    <script src="..lib/easing/easing.min.js"></script>
+    <script src="..lib/waypoints/waypoints.min.js"></script>
+    <script src="..lib/counterup/counterup.min.js"></script>
+    <script src="..lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="..lib/tempusdominus/js/moment.min.js"></script>
+    <script src="..lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="..lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-	<script src="js/nav.js"></script>
+    <script src="../static/js/main.js"></script>
+	  <script src="../static/js/modal.js"></script>
+	  <script src="../static/js/nav.js"></script>
+	  <script src="../static/js/script.js"></script>
+
 </body>
 
 </html>
