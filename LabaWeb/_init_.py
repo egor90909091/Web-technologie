@@ -3,6 +3,7 @@ import sqlite3
 
 
 app = Flask(__name__)
+
 conn = sqlite3.connect("database.db")
 c = conn.cursor()
 
@@ -75,24 +76,6 @@ def submit_form():
     print("Email:", email)
     print("Телефон:", phone)
 
-    # Возвращаем сообщение об успешной обработке данных
-    return "Данные успешно получены и обработаны"
-
-
-# @app.route("/submit_form", methods=["POST"])
-# def submit_form():
-#     # Получение данных из формы
-#     first_name = request.form["first_name"]
-#     last_name = request.form["last_name"]
-#     email = request.form["email"]
-#     phone = request.form["phone"]
-
-#     # Создание или подключение к базе данных
-#     conn = sqlite3.connect("database.db")
-#     c = conn.cursor()
-
-#     # Вставка данных в таблицу Users
-#     c.execute(
-#         "INSERT INTO users (first_name, last_name, email, phone) VALUES (?, ?, ?, ?)",
-#         (first_name, last_name, email, phone),
-#     )
+    # Возвращаем JSON с сообщением об успешной обработке данных
+    response = {"message": "Данные успешно получены и обработаны"}
+    return jsonify(response)
